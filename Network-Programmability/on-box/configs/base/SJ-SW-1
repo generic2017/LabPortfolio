@@ -1,0 +1,33 @@
+config t
+hostname SJ-SW-1
+!
+vrf definition  MGMT
+add ipv4
+!
+int g0/1
+no switchport
+vrf forwarding MGMT
+ip address 192.168.122.13 255.255.255.0
+no shut
+!
+ip domain lookup
+!
+ip ssh version 2
+!
+ip name-server vrf MGMT 192.168.122.1 
+!
+ip domain-name lab.com
+!
+ip route vrf MGMT 0.0.0.0 0.0.0.0 192.168.122.1
+!
+!
+crypto key generate rsa mod 2048
+!
+username admin privilege 15 password admin
+!
+line vty 0 4
+transport input all
+privilege level 15
+login local
+!
+end

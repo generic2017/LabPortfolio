@@ -1,0 +1,28 @@
+//////////////////////// # Figol - LAB Session#1  \\\\\\\\\\\\\\\\\\\\\\\\\
+a - Configure SSH manually
+b - Configure IP addressing using Python, no cli changes besides SSH access
+
+Software:
+IOSv-L2: 15.2 (Cisco IOSvL2 15.2.4055)
+IOSv: 15.6 (Cisco IOSv 15.6(2)T
+CSR1000v: 16.7.1
+
+IP AddressringL
+10.0.0.0 /8
+PC1: VLAN10 - 10.1.10.0 /24
+PC2: VLAN 20 - 10.1.20.0 /24
+P2P: 10.1.0.0 /24 (get /30)
+
+For Broadcast Network between Routers/FW use /29
+
+# Ansible Inventory file - google - 'ansible inventory file'
+https://docs.ansible.com/ansible/2.4/intro_inventory.html 
+
+# Python Requirements file 'requirement.txt'.
+we will have to create a python 'requirements.txt' file. This file is where you define all your python library dependencies
+
+# How to parse yaml in Python:
+https://stackoverflow.com/questions/1773805/how-can-i-parse-a-yaml-file-in-python 
+
+
+https://pyyaml.org/wiki/PyYAMLDocumentation
